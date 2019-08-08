@@ -29,7 +29,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
         auth.userDetailsService(userDetailsService)
-                .passwordEncoder(getPasswordEncoder());
+              .passwordEncoder(getPasswordEncoder());
+             //   .passwordEncoder(passwordEncoder);
 
     }
 
@@ -52,7 +53,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
             @Override
             public boolean matches(CharSequence charSequence, String s) {
-                return false;
+                return true;
             }
         };
     }
