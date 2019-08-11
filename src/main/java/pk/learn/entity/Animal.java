@@ -1,6 +1,6 @@
 package pk.learn.entity;
 
-public class animal {
+public class Animal {
 
     private String type;
 
@@ -9,7 +9,7 @@ public class animal {
     private double weight;
 
     private void giveSound(){
-        System.out.println("I'm a " + type);
+        System.out.println("I'm a " + type + " and my name is " + name);
     }
 
     public String getType() {
